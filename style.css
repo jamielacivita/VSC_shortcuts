@@ -6,3 +6,7 @@ font-weight: bold;
 
 h2 {font-family: 'Montserrat', sans-serif;}
 
+.greylight {background-color:rgba(128,128,128,.4)}
+.row {margin-left: 60px;}
+
+.bottomBorder {border-bottom: 3px solid black;margin-left:0px;margin-right:0px;}
