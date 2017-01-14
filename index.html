@@ -280,11 +280,67 @@
 </div>
 <!--End Here-->
 
-<!--Paste Multi Cursor and selection above Here-->
+<div id="container_richLanguagesEditing" class="container richLanguagesEditing">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>Rich Languages Editing</h1>
+        </div>
+    </div>
 
-<!--Paste Here-->
+    <!--Start of a content row-->
+    <div class = "greylight">
+        <div class="row">
+        <div class="col-md-8">
+            <h2>Trigger suggestion</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+[space]</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
 
-<!--Paste Here-->
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Trigger parameter hints</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+[Shift]+[space]</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+    <div class="row">
+        
+        <div class="col-md-8">
+            <h2>Emmet expand abbreviation</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Tab]</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+        <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Format document</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Shift]+[Alt]+F</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+
 
 
 </body>
@@ -305,6 +361,9 @@ searchAndReplaceLink.onclick = showSearchAndReplace;
 var multiCursorAndSelectionLink = document.getElementById("lnk_multiCursorAndSelection");
 multiCursorAndSelectionLink.onclick = showMultiCursorAndSelection;
 
+var richLanguagesEditing = document.getElementById("lnk_richLanguagesEditing");
+richLanguagesEditing.onclick = showRichLanguagesEditing;
+
 function hideSections()
 {
 $("#container_general").hide()
@@ -312,6 +371,7 @@ $("#container_basicEditing").hide()
 $("#container_navigation").hide()
 $("#container_searchAndReplace").hide()
 $("#container_multiCursorAndSelection").hide()
+$("#container_richLanguagesEditing").hide()
 }
 
 function showGeneral()
@@ -348,6 +408,15 @@ function showMultiCursorAndSelection()
     $("#container_multiCursorAndSelection").show();
     return null;
 }
+
+function showRichLanguagesEditing()
+{
+    hideSections();
+    $("#container_richLanguagesEditing").show();
+    return null;
+}
+
+
 </script>
 
 </html>
