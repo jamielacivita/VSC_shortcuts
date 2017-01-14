@@ -466,9 +466,79 @@
 </div>
 <!--End of File Managment-->
 
+<!--Start of Display-->
+<div id="container_display" class="container display">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>Display</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Toggle full screen</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>[Ctrl]+n</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Toggle editor layout</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>[Ctrl]+o</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+
+            <div class="col-md-8">
+                <h2>Zoom in/out</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>[Ctrl]+ =/-</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Toggle Sidebar visibilty</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>[Ctrl]+[Shift]+s</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+<!--End of Display-->
+
 </body>
 
 <script>
+
+  //Template =================================
+  //  var ~~term~~Link = document.getElementById("lnk_~~term~~");
+  //  ~~term~~Link.onclick = show~~term~~;
+//Tempate===========================
+
+
     var generalLink = document.getElementById("lnk_general");
     generalLink.onclick = showGeneral;
 
@@ -493,6 +563,12 @@
     var fileManagement = document.getElementById("lnk_fileManagement");
     fileManagement.onclick = showFileManagement;
 
+    var fileManagement = document.getElementById("lnk_fileManagement");
+    fileManagement.onclick = showFileManagement;
+
+    var displayLink = document.getElementById("lnk_display");
+    displayLink.onclick = showDisplay;
+
 
     function hideSections() {
         $("#container_general").hide()
@@ -503,6 +579,7 @@
         $("#container_richLanguagesEditing").hide()
         $("#container_editorManagement").hide()
         $("#container_fileManagement").hide()
+        $("#container_display").hide()
     }
 
     function showGeneral() {
@@ -550,6 +627,12 @@
         function showFileManagement() {
         hideSections();
         $("#container_fileManagement").show();
+        return null;
+    }
+
+        function showDisplay() {
+        hideSections();
+        $("#container_display").show();
         return null;
     }
 
