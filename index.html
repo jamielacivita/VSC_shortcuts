@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VS Code Shortcuts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+<!--Download jquery-->
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+</script>
+
+</head>
+ 
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header" style="margin-top:-16px">
+                <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" class="navbar-brand">
+                    <img src="vscode_resized.png" alt="vscode logo">
+                </a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a id="lnk_general" href="#">General</a></li>
+                <li><a id="lnk_basicEditing" href="#">Basic Editing</a></li>
+                <li><a id="lnk_navigation" href="#">Navigation</a></li>
+                <li><a id="lnk_searchAndReplace" href="#">Search and Replace</a></li>
+                <li><a id="lnk_multiCursorAndSelection" href="#">Multi-cursor and selection</a></li>
+                <li><a id="lnk_richLanguagesEditing" href="#">Rich Languages editing</a></li>
+                <li><a id="lnk_editorManagement" href="#">Editor Managment</a></li>
+                <li><a id="lnk_fileManagment" href="#">File Management</a></li>
+                <li><a id="lnk_display" href="#">Display</a></li>
+                <li><a id="lnk_debug" href="#">Debug</a></li>
+                <li><a id="lnk_integratedTerminal" href="#">Integrated termimal</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+<div id="container_general" class="container general">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>General</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+        <div class="row">
+        <div class="col-md-8">
+            <h2>List Commands and Shortcuts</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+[SHIFT]+P</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Quick Open</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+P</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>New Window</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+[SHIFT]+N</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+        <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Close Window</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+[SHIFT]+W</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+</div>
+
+<div id="container_basicEditing" class="container basicEditing">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Basic editing</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Cut line</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+x</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+</div>
+
+<div id="container_navigation" class="container basicEditing">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Show all symbols</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+t</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+
+</body>
+
+<script>
+var generalLink = document.getElementById("lnk_general");
+generalLink.onclick = showGeneral;
+
+var basicEditingLink = document.getElementById("lnk_basicEditing");
+basicEditingLink.onclick = showbasicEditing;
+
+var navigationLink = document.getElementById("lnk_navigation");
+navigationLink.onclick = showNavigation;
+
+function hideSections()
+{
+$("#container_general").hide()
+$("#container_basicEditing").hide()
+$("#container_navigation").hide()
+}
+
+function showGeneral()
+{
+    hideSections();
+    $("#container_general").show();
+    return null;
+}
+
+function showbasicEditing()
+{
+    hideSections();
+    $("#container_basicEditing").show();
+    return null;
+}
+
+function showNavigation()
+{
+    hideSections();
+    $("#container_navigation").show();
+    return null;
+}
+
+</script>
+
+</html>
