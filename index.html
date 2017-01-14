@@ -42,7 +42,7 @@
 
         </div>
     </nav>
-
+<!--Start Here-->
 <div id="container_general" class="container general">
     <div class="row bottomBorder">
         <div class="col-md-12">
@@ -102,8 +102,9 @@
         </div>
     </div>
     <!--End of a content row-->
-
 </div>
+<!--End Here-->
+
 
 <div id="container_basicEditing" class="container basicEditing">
     <div class="row bottomBorder">
@@ -129,7 +130,7 @@
 
 </div>
 
-<div id="container_navigation" class="container basicEditing">
+<div id="container_navigation" class="container navigation">
     
     <div class="row bottomBorder">
         <div class="col-md-12">
@@ -152,6 +153,140 @@
     <!--End of a content row-->
 </div>
 
+<!--Start Here-->
+<div id="container_searchAndReplace" class="container searchAndReplace">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>Search and Replace</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+        <div class="row">
+        <div class="col-md-8">
+            <h2>Find</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+f</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Replace</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[CTRL]+h</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+    <div class="row">
+        
+        <div class="col-md-8">
+            <h2>Find Next</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>F3</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+        <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Find Previous</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Shift]+F3</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+<!--End Here-->
+
+
+<!--Start Here-->
+<div id="container_multiCursorAndSelection" class="container multiCursorAndSelection">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>Multi-cursor and selection</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+        <div class="row">
+        <div class="col-md-8">
+            <h2>Insert cursor</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Alt]+Click</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Insert Cursor Above</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+[Alt]+upArrow</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class = "greylight">
+    <div class="row">
+        
+        <div class="col-md-8">
+            <h2>Insert Cursor Below</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+[Alt]+downArrow</h2>
+        </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+        <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Undo last cursor operation</h2>
+        </div>
+    
+        <div class="col-md-4">
+            <h2>[Ctrl]+u</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+<!--End Here-->
+
+<!--Paste Multi Cursor and selection above Here-->
+
+<!--Paste Here-->
+
+<!--Paste Here-->
+
+
 </body>
 
 <script>
@@ -164,11 +299,19 @@ basicEditingLink.onclick = showbasicEditing;
 var navigationLink = document.getElementById("lnk_navigation");
 navigationLink.onclick = showNavigation;
 
+var searchAndReplaceLink = document.getElementById("lnk_searchAndReplace");
+searchAndReplaceLink.onclick = showSearchAndReplace;
+
+var multiCursorAndSelectionLink = document.getElementById("lnk_multiCursorAndSelection");
+multiCursorAndSelectionLink.onclick = showMultiCursorAndSelection;
+
 function hideSections()
 {
 $("#container_general").hide()
 $("#container_basicEditing").hide()
 $("#container_navigation").hide()
+$("#container_searchAndReplace").hide()
+$("#container_multiCursorAndSelection").hide()
 }
 
 function showGeneral()
@@ -192,6 +335,19 @@ function showNavigation()
     return null;
 }
 
+function showSearchAndReplace()
+{
+    hideSections();
+    $("#container_searchAndReplace").show();
+    return null;
+}
+
+function showMultiCursorAndSelection()
+{
+    hideSections();
+    $("#container_multiCursorAndSelection").show();
+    return null;
+}
 </script>
 
 </html>
