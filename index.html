@@ -529,6 +529,74 @@
 </div>
 <!--End of Display-->
 
+<!--Start of of Debug-->
+<div id="container_debug" class="container debug">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>Debug</h1>
+        </div>
+    </div>
+
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Toggle breakpoint</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>F9</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Start/Continue</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>F5</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+
+            <div class="col-md-8">
+                <h2>Stop</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>[Shift]+F5</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Step into/out</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>[F11] / Shift+F11</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
+
+<!--End of Debug-->
+
+<!--Start of Integrated Terminal-->
+
+<!--End of Integrted Terminaol-->
+
 </body>
 
 <script>
@@ -569,6 +637,9 @@
     var displayLink = document.getElementById("lnk_display");
     displayLink.onclick = showDisplay;
 
+    var debugLink = document.getElementById("lnk_debug");
+    debugLink.onclick = showDebug;
+
 
     function hideSections() {
         $("#container_general").hide()
@@ -580,6 +651,7 @@
         $("#container_editorManagement").hide()
         $("#container_fileManagement").hide()
         $("#container_display").hide()
+        $("#container_debug").hide()
     }
 
     function showGeneral() {
@@ -633,6 +705,12 @@
         function showDisplay() {
         hideSections();
         $("#container_display").show();
+        return null;
+    }
+
+            function showDebug() {
+        hideSections();
+        $("#container_debug").show();
         return null;
     }
 
