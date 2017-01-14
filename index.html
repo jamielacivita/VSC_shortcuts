@@ -594,18 +594,71 @@
 <!--End of Debug-->
 
 <!--Start of Integrated Terminal-->
+<div id="container_integratedTerminal" class="container integratedTerminal">
+    <div class="row bottomBorder">
+        <div class="col-md-12">
+            <h1>integratedTerminal</h1>
+        </div>
+    </div>
 
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Show integrated terminal</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>[Ctrl]+`</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>Create new terminal</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>[Ctrl]+[Shift]+`</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="greylight">
+        <div class="row">
+
+            <div class="col-md-8">
+                <h2>Copy selection</h2>
+            </div>
+
+            <div class="col-md-4">
+                <h2>[Ctrl]+[Shift]+c</h2>
+            </div>
+        </div>
+    </div>
+    <!--End of a content row-->
+
+    <!--Start of a content row-->
+    <div class="row">
+        <div class="col-md-8">
+            <h2>[Ctrl]+[Shift]+v</h2>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Paste into active terminal</h2>
+        </div>
+    </div>
+    <!--End of a content row-->
+</div>
 <!--End of Integrted Terminaol-->
 
 </body>
 
 <script>
-
-  //Template =================================
-  //  var ~~term~~Link = document.getElementById("lnk_~~term~~");
-  //  ~~term~~Link.onclick = show~~term~~;
-//Tempate===========================
-
 
     var generalLink = document.getElementById("lnk_general");
     generalLink.onclick = showGeneral;
@@ -640,6 +693,9 @@
     var debugLink = document.getElementById("lnk_debug");
     debugLink.onclick = showDebug;
 
+     var integratedTerminalLink = document.getElementById("lnk_integratedTerminal");
+    integratedTerminalLink.onclick = showIntegratedTerminal;
+
 
     function hideSections() {
         $("#container_general").hide()
@@ -652,6 +708,7 @@
         $("#container_fileManagement").hide()
         $("#container_display").hide()
         $("#container_debug").hide()
+        $("#container_integratedTerminal").hide()
     }
 
     function showGeneral() {
@@ -708,11 +765,20 @@
         return null;
     }
 
-            function showDebug() {
+        function showDebug() {
         hideSections();
         $("#container_debug").show();
         return null;
     }
+
+        function showIntegratedTerminal() {
+        hideSections();
+        $("#container_integratedTerminal").show();
+        return null;
+    }
+
+hideSections()
+showGeneral()
 
 </script>
 
